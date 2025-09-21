@@ -56,6 +56,7 @@ const SoilForm = () => {
 
       <div className="w-full max-w-3xl bg-white p-10 rounded-3xl shadow-2xl space-y-6">
         <form onSubmit={handleSubmit} className="space-y-6">
+          {/* District Select */}
           <div className="flex flex-col">
             <label className="text-xl font-semibold mb-2 text-green-800">District</label>
             <select
@@ -72,6 +73,7 @@ const SoilForm = () => {
             </select>
           </div>
 
+          {/* Image Upload */}
           <div className="flex flex-col">
             <label className="text-xl font-semibold mb-2 text-green-800">Upload Soil Image</label>
             <input
@@ -82,22 +84,24 @@ const SoilForm = () => {
             />
           </div>
 
+          {/* Analyze Button */}
           <button
             type="submit"
             className="w-full bg-green-700 hover:bg-green-800 text-white font-bold text-2xl py-4 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
           >
             {loading ? "Analyzing..." : "Analyze Soil"}
           </button>
-          
+
+          {/* Return to Home Button */}
+          <button
+            type="button"
+            onClick={() => navigate("/")}
+            className="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold text-2xl py-4 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
+          >
+            Return to Home
+          </button>
         </form>
-        
       </div>
-      <button
-    onClick={() => navigate("/")} // change "/" if your home route is different
-    className="w-full mt-4 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold text-xl py-3 rounded-2xl shadow-md transition-transform transform hover:scale-105"
-  >
-    Return to Home
-  </button>
     </div>
   );
 };
