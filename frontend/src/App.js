@@ -1,16 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";      
-import SoilForm from "./pages/SoilForm"; 
+import Home from "./pages/Home";
+import SoilForm from "./pages/SoilForm";
 import OrganicFarming from "./pages/OrganicFarming";
-import CropRotation from "./pages/organic/CropRotation";
-import Composting from "./pages/organic/Composting";
-import PestControl from "./pages/organic/PestControl";
-import GreenManure from "./pages/organic/GreenManure";
-import WaterManagement from "./pages/organic/WaterManagement";
-import Certification from "./pages/organic/Certification";
-
+import Jeevamrut from "./pages/organic/Jeevamrut";
 import Result from "./pages/Result";
-
+import PaddyHuskAsh from "./pages/organic/PaddyHuskAsh";
+import FishDuckFarming from "./pages/organic/FishDuckFarming";
+import TrapCrops from "./pages/organic/TrapCrops";
+import AlternateWettingDrying from "./pages/organic/AlternateWettingDrying";
+import CertificationSelling from "./pages/organic/CertificationSelling";
 
 function App() {
   return (
@@ -19,14 +17,23 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/soilform" element={<SoilForm />} />
         <Route path="/organic" element={<OrganicFarming />} />
-        <Route path="/organic/crop-rotation" element={<CropRotation />} />
-        <Route path="/organic/composting" element={<Composting />} />
-        <Route path="/organic/pest-control" element={<PestControl />} />
-        <Route path="/organic/green-manure" element={<GreenManure />} />
-        <Route path="/organic/water-management" element={<WaterManagement />} />
-        <Route path="/organic/certification" element={<Certification />} />
-        <Route path="/result" element={<Result />} />
+        <Route path="/organic/jeevamrut" element={<Jeevamrut />} />
+        <Route path="/organic/paddy-husk-ash" element={<PaddyHuskAsh />} />
+        <Route
+          path="/organic/fish-duck-farming"
+          element={<FishDuckFarming />}
+        />
+        <Route path="/organic/trap-crops" element={<TrapCrops />} />
+        <Route
+          path="/organic/alternate-wetting-drying"
+          element={<AlternateWettingDrying />}
+        />
+        <Route
+          path="/organic/certification-selling"
+          element={<CertificationSelling />}
+        />
 
+        <Route path="/result" element={<Result />} />
       </Routes>
     </Router>
   );
